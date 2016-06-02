@@ -1,0 +1,20 @@
+#song{
+    display: none;
+}
+#gameboard{
+  width: 100%;
+  height: 600px;
+  background-color: gold;
+}
+#mainplayer{
+  height: 200px;
+  position: absolute;
+  top: 520px;
+  left: 300px;
+}
+#bee{
+  display:none;
+  margin: auto;
+  width: 3%;
+  padding: 10px;
+}
