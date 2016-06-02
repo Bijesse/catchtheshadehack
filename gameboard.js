@@ -1,5 +1,6 @@
 $( document ).ready(function() {
- $("#game").click(function(){
+ setInterval (animate,1000);
+  $("#game").click(function(){
   $("#bee").hide();
   }); 
 function moveDown(){
@@ -31,10 +32,14 @@ p.css({ left: move});
  console.log("left: " + p.position().left + ", top: " + p.position().top);
 }
   function shootBee(){
-    $("#bee").show();
+    var p= $("#mainplayer");
+    var left = p.position().left;
+    var top = p.position().top;
+    $("#bee").css({ left: left});
+   $("#bee").css({ top: top - 30});
+    $("#bee").show(500);
   }
 document.addEventListener('keydown', function(e){
-    e.preventDefault();
     if(e.keyCode === 37) {
         moveLeft();
     } else if(e.keyCode === 39) {
@@ -62,4 +67,37 @@ function checkcollison (playerPosition, objectPosition){
     }
   }
   return false;
+}
+function animate() {
+$(".lemonade").each(function(){
+  var top;
+top = $(this).position().top ;
+if (top < 450) {
+top=top+175;
+$(this).css({top: top});
+}
+    else {
+    $( this ).remove();
+  }
+  if (checkcollison($("#mainplayer").position(),$(this).position())
+     ) {
+      location.href="losing.html?score="+score; 
+    }
+  
+});
+  
+  
+  
+  var random=Math.random();
+  var count=$(".lemonade").length;
+  if (random<=0.7) {
+    var clone=$("#gameboard").append('<img src="http://www.drdeborahbaker.com/wp-content/uploads/2014/07/lemon.png" class="lemonade">');
+    clone.hide();
+    
+    var random1=((Math.random() * 800) + 200);
+    var last = $(".lemonade").last();
+    last.css("left", random1);
+   clone.show();
+
+  }
 }

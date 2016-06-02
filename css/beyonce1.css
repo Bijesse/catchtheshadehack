@@ -10,7 +10,7 @@ h1{
  color:#FF0044;
  width: 100%;
  text-align: center;
- text-shadow:  4px 4px #25FFDC;
+ text-shadow:  4px 0px #25FFDC, 6px 2px 5px red;
 }
 
 #play{
@@ -18,18 +18,17 @@ h1{
   background-color:black;
   width:20%;
   color:#22FFED;
-  font-size:40px;
-  border-radius: 12px;
-  border: 5px double #22FFED;
+  font-size:60px;
+  border-radius: 112px;
+  border: 10px double #22FFED;
   margin-left:40%;
-  text-shadow:  2px 1px #A31DB2;
+  text-shadow:  2px 1px #A31DB2, 6px 2px 5px red;
+padding:10px;
 }
 #notes{
   width:100.5%;
 }
 #play:hover{
-  box-shadow: 0 12px 16px 0 rgba(2,8,6,0.99), 0 17px 90px 30px;
-}
-h1:hover{
+ 
   box-shadow: 0 12px 16px 0 rgba(2,8,6,0.99), 0 17px 90px 30px;
 }
