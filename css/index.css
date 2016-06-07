@@ -1,0 +1,77 @@
+#Chocolate {
+Border:8px solid #ffe0b3;
+width:600px;
+margin-left:22.7%;
+}
+
+h1 {
+padding: 10px; 
+}
+
+body{
+background: url("https://media.giphy.com/media/wwjEPjqcuPwvS/giphy.gif");
+background-repeat:no-repeat;
+background-size: cover;
+}
+
+div{
+text-align:center; 
+width:40%;
+margin-left:27%;
+}
+
+#shamoop:hover{
+box-shadow: 20px 20px Gold;
+height: 310px;
+width: 500px;
+}
+
+#B{
+text-shadow: 15px 20px Gold; 
+}
+
+#shamoop{
+width:450px;
+}
+
+#shaloop:hover{
+box-shadow: 20px 20px Purple;
+height: 310px;
+width: 500px;
+}
+
+#F{
+text-shadow: 15px 20px Purple;
+}
+
+#shaloop{
+width:450px;
+}
+
+#shakoop:hover{
+box-shadow: 20px 20px #ff6600;
+height: 310px;
+width: 500px;
+}
+
+#D{
+text-shadow: 15px 20px #ff6600;
+}
+
+#shakoop{
+  width:450px;
+}
+
+#sharoop:hover{
+box-shadow: 20px 20px hotPink;
+height: 310px;
+width: 500px;
+}
+
+#R{
+text-shadow: 15px 20px hotPink;
+}
+
+#sharoop{
+width:450px;
+}

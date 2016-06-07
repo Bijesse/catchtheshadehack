@@ -6,28 +6,28 @@ $( document ).ready(function() {
 function moveDown(){
 var p= $("#mainplayer" );
   var position = p.position().top;
-  var move= position + 100;
+  var move= position + 50;
   p.css({ top: move});
   console.log("left: " + p.position().left + ", top: " + p.position().top);
 }
 function moveUp(){
   var p= $("#mainplayer" );
   var position = p.position().top;
-  var move= position - 100;
+  var move= position - 50;
   p.css({ top: move});
   console.log("left: " + p.position().left + ", top: " + p.position().top);
 }
 function moveLeft(){
 var p = $( "#mainplayer" );
 var position = p.position().left;
-var move = position - 100;
+var move = position - 50;
 p.css({ left: move});
   console.log("left: " + p.position().left + ", top: " + p.position().top);
 }
 function moveRight(){
 var p = $( "#mainplayer" );
 var position = p.position().left;
-var move = position + 100;
+var move = position + 50;
 p.css({ left: move});
  console.log("left: " + p.position().left + ", top: " + p.position().top);
 }
@@ -54,11 +54,16 @@ document.addEventListener('keydown', function(e){
   },false);
 });
 function checkcollison (playerPosition, objectPosition){
+  console.log (objectPosition.top);
   if(objectPosition.top + 50 >= 480){
-  var playerLeft = playerPosition.left - 20;
-  var playerRight = playerPosition.left + 20;
+  var playerLeft = playerPosition.left - 50;
+    console.log(playerLeft, "playerLeft");
+  var playerRight = playerPosition.left + 50;
+    console.log(playerRight, "playerRight");
   var objectLeft = objectPosition.left - 50;
+    console.log(objectLeft, "objectLeft");
   var objectRight = objectPosition.left + 50;
+    console.log(objectRight, "objectRight");
   if (playerLeft <= objectLeft && objectLeft <=playerRight){
    return true; 
   }
@@ -69,6 +74,7 @@ function checkcollison (playerPosition, objectPosition){
   return false;
 }
 function animate() {
+  
 $(".lemonade").each(function(){
   var top;
 top = $(this).position().top ;
@@ -81,7 +87,9 @@ $(this).css({top: top});
   }
   if (checkcollison($("#mainplayer").position(),$(this).position())
      ) {
-      location.href="losing.html?score="+score; 
+ var currentScore= parseInt($(".score").text());
+  var score=  currentScore + 4;
+  $(".score").text(score);
     }
   
 });
