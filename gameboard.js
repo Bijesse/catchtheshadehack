@@ -55,7 +55,14 @@ document.addEventListener('keydown', function(e){
 });
 function checkcollison (playerPosition, objectPosition){
   console.log (objectPosition.top);
-  if(objectPosition.top + 50 >= 480){
+  var playerTop = playerPosition.top - 75;
+  console.log(playerTop, "playerTop");
+  var playerBottom = playerPosition.top + 75;
+  console.log(playerBottom, "playerBottom");
+  var objectTop = objectPosition.top - 50;
+  console.log(objectTop, "objectTop");
+  var objectBottom = objectPosition.top + 50;
+  console.log(objectBottom, "objectBottom");
   var playerLeft = playerPosition.left - 50;
     console.log(playerLeft, "playerLeft");
   var playerRight = playerPosition.left + 50;
@@ -65,9 +72,12 @@ function checkcollison (playerPosition, objectPosition){
   var objectRight = objectPosition.left + 50;
     console.log(objectRight, "objectRight");
   if (playerLeft <= objectLeft && objectLeft <=playerRight){
+   if ((playerTop <= objectTop && objectTop <= playerBottom)||(playerTop <= objectBottom && objectBottom <=playerBottom)){
    return true; 
+   }
   }
     if(playerLeft<=objectRight && objectRight <=playerRight){
+      if ((playerTop <= objectTop && objectTop <= playerBottom)||(playerTop <= objectBottom && objectBottom <=playerBottom)){
     return true;  
     }
   }
@@ -79,7 +89,7 @@ $(".lemonade").each(function(){
   var top;
 top = $(this).position().top ;
 if (top < 450) {
-top=top+175;
+top=top+75;
 $(this).css({top: top});
 }
     else {
@@ -90,6 +100,7 @@ $(this).css({top: top});
  var currentScore= parseInt($(".score").text());
   var score=  currentScore + 4;
   $(".score").text(score);
+     $( this ).remove();
     }
   
 });

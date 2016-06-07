@@ -4,7 +4,6 @@
 #gameboard{
   width: 100%;
   height: 600px;
-  background-color:black;
 }
 #mainplayer{
   height: 200px;
@@ -22,4 +21,54 @@ height: 100px;
 position: absolute;
 top: 100px;
 left: 150px;
+z-index:2;
+}
+body{
+background: url("http://media3.giphy.com/media/3o7GVDAkLp4cEMbzwc/giphy.gif");
+}
+
+#mainplayer{
+  height: 200px;
+  position: absolute;
+  top: 520px;
+  left: 300px;
+  margin-left:25%;
+  z-index:3;
+}
+#party{
+  position:relative;
+  z-index:1;
+   border-radius: 112px;
+  border: 10px double #22FFED;
+  width:55%;
+  margin-left:5%;
+  box-shadow:  0px 17px 90px 30px #22FFED;
+   max-width: 100%;
+}
+#lemons{
+  left:350px;
+  bottom:595px;
+  position:relative;
+z-index:2;
+  width:15%;
+}
+#lem{
+ left:695px;
+ bottom:507px;
+  position:absolute;
+z-index:2;
+  width:15%;
+}
+#mon{
+ left:520px;
+ bottom:507px;
+  position:absolute;
+z-index:2;
+  width:15%;
+}
+.score{
+  color:cyan;
+  font-size: 30px;
+  
+}
 }
