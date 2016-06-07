@@ -23,6 +23,14 @@ top: 100px;
 left: 150px;
 z-index:2;
 }
+.score{
+  color:cyan;
+  font-size: 30px;
+  position:absolute;
+  top:0;
+  left:0;
+  
+}
 body{
 background: url("http://media3.giphy.com/media/3o7GVDAkLp4cEMbzwc/giphy.gif");
 }
@@ -36,39 +44,37 @@ background: url("http://media3.giphy.com/media/3o7GVDAkLp4cEMbzwc/giphy.gif");
   z-index:3;
 }
 #party{
-  position:relative;
+  position:absolute;
   z-index:1;
    border-radius: 112px;
   border: 10px double #22FFED;
-  width:55%;
-  margin-left:5%;
+  width:730px;
+  margin-left:20%;
   box-shadow:  0px 17px 90px 30px #22FFED;
    max-width: 100%;
 }
 #lemons{
-  left:350px;
-  bottom:595px;
-  position:relative;
+  left:329px;
+  top:0;
+  position:absolute;
 z-index:2;
-  width:15%;
+  width:180px;
+    margin-top:18px;
 }
 #lem{
- left:695px;
- bottom:507px;
+ left:729px;
+top:0;
   position:absolute;
 z-index:2;
-  width:15%;
-}
-#mon{
- left:520px;
- bottom:507px;
-  position:absolute;
-z-index:2;
-  width:15%;
-}
-.score{
-  color:cyan;
-  font-size: 30px;
+  width:180px;
+  margin-top:18px;
   
 }
+#mon{
+ left:530px;
+top:0;
+  position:absolute;
+z-index:2;
+  width:180px;
+ margin-top:18px;
 }
